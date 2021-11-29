@@ -1,0 +1,6 @@
+
+/*add necessary CSS styles here*/
+
+/*rule for profile image(id=profile)
+  we want the image to not be "DISPLAY"ed (only drawn on canvas)*/
+#profile { }

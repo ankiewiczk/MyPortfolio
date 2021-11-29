@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Example</title>
+  <script src="canvasSolution.js"></script>
+  <link rel="stylesheet" type="text/css" href="canvasSolution.css"/>
+</head>
+<body>
+
+<input id="color" type="text" value="black" />
+
+<!-- this image should be hidden using css display:none; -->
+<img id="profile" width="220" height="277"
+     src="profile.jpg"
+     alt="Mr. Ankiewicz's Profile Photo" >
+
+<p>Canvas:</p>
+
+<canvas id="myCanvas" width="400" height="400"
+        style="border:1px solid #d3d3d3;"
+        onmouseup="onMouseUp(event);"
+        onmousedown="onMouseDown(event);"
+        onmousemove="onMouseMove(event);">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<!-- output paragraph for coordinates -->
+<p id="coords">x:  y:</p>
+</body>
+</html>
