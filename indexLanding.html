@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mr. Ankiewicz's Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<!-- Note W3schools uses divs where I will modify to use Semantic Elements-->
+<div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+</div>
+
+<!-- Header -->
+<header>
+  <h1>Mr. Ankiewicz's Portfolio</h1>
+</header>
+
+<!-- Navigation Bar -->
+<nav>
+  <a href="#">About Me</a>
+  <a href="#">Contact</a>
+  <a href="#">Projects</a>
+  <a href="#">Related Links</a>
+</nav>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <aside class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <div class="imgwrapper"><img src="imgs/ankiewiczkExternal.jpg" alt="Personal Profile photo" style="height:200px;"/></div>
+    <p>I am a vocational teacher at Lynn Vocational Technical Institute for Programming and Web Design.  I have been teaching since 2012. I grew up and live in Lynn currently and love my hometown and what it has to offer (beaches, woods, urban life).</p>
+  </aside>
+  <div class="main">
+    <section>
+    <h2>Java Programming in Alice</h2>
+    <h5>Junior Year Quarter 1</h5>
+    <div class="imgwrapper"><img src="imgs/AliceBanner.PNG"/></div>
+    <p>Alice is a Programming Integrated Development Environment (IDE) designed
+      to teach the Java programming language and let students quickly create 3D
+      models and environments that are programmable and playable.  They can be
+      scripted movies or interactive games that listen to keystrokes and mouse
+      movements.
+    </p>
+    <p>Topics students learn this quarter are:
+      <ol>
+        <li>Storyboarding and Writing algorithms</li>
+        <li>Writing methods</li>
+        <li>Learning Datatypes and expressions</li>
+        <li>Learning Control Flow </li>
+        <li>Arrays</li>
+        <li>Event handling and listeners</li>
+      </ol>
+    </p>
+    </section>
+    <br>
+    <section>
+    <h2>Java Programming Using BlueJ</h2>
+    <h5>Junior Year Quarter 2</h5>
+    <div class="imgwrapper"><img src="imgs/BlueJBanner.PNG"/></div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </section>
+  </div><!-- end of div.main -->
+</div><!-- end of div.row -->
+
+<!-- Footer -->
+<footer class="footer">
+  <h4>Copyright &copy; <script>document.write(d.getFullYear());</script> Kevin Ankiewicz All Rights Reserved</h4>
+</footer>
+
+</body>
+</html>
