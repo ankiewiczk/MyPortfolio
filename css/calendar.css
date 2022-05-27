@@ -1,0 +1,86 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.container {
+  padding:0px;
+  margin:0;
+  width:650px;
+}
+
+div {
+  min-width:1em;
+  margin:10px;
+  font-size:30px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+h1 {
+  text-align:center;
+  margin-bottom: 0;
+}
+
+.weekday {
+  box-sizing: border-box;
+  min-width:6em;
+  font-size:15px;
+  /*both of the following styles try to flatten header*/
+  padding:0px 20px;
+  margin-bottom: 0;
+}
+
+p {
+  font-size:.5em;
+  margin:0;
+}
+/* Example 1 */
+.flex-container-top {
+  display: flex;
+  counter-reset: day 0;
+  background-color: DodgerBlue;
+  flex-wrap: wrap;
+  width:630px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#first-day {
+  counter-reset: day 0;
+}
+
+.flex-container-top > div {
+  counter-increment: day 1; /*increment day by 1 */
+  padding: 5px;
+  vertical-align: super;
+  text-align:left;
+  width:70px;
+  height:70px;
+}
+
+.flex-container-top > div::before {
+  content: counter(day);
+  vertical-align: super;
+  font-size:8px;
+  color:purple;
+}
+/*nth-child 7n+2 takes every second day of the week */
+.flex-container-top div:nth-child(7n+2):nth-child(even),
+.flex-container-top div:nth-child(7n+3):nth-child(2n+1),
+.flex-container-top div:nth-child(7n+4):nth-child(even),
+.flex-container-top div:nth-child(7n+5):nth-child(2n+1),
+.flex-container-top div:nth-child(7n+6):nth-child(even)
+{
+
+  background-color:red;
+}
+/*
+#flex-top div:nth-child(14n+2) {
+  background-color:green;
+}*/
