@@ -1,0 +1,79 @@
+
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  background: #374954;
+  color: white;
+  text-align: center;
+}
+
+#main{
+  position: relative;
+  list-style: none;
+  background: #6BBE92;
+  font-weight: 400;
+  font-size: 0;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0;
+  margin: 50px auto;
+
+}
+#main li{
+  font-size: 0.8rem;
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  cursor: pointer;
+  z-index: 5;
+  min-width: 120px;
+}
+
+li{
+  margin: 0;
+}
+
+.drop{
+  /* overflow hidden is needed to hide dropdown before translating it upward*/
+  overflow: hidden;
+  /*removes markers from LI*/
+  list-style: none;
+  /* needed to not be default for children to be aligned to left */
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  top: 48px;
+}
+/* this is the actual content in the dropdown*/
+.drop div{
+  /* move it up 100% and its hidden becaise of overflow?:hidden*/
+  transform:translate(0,-100%);
+  /* animate the transform with a delay of .5 and animation time of 1s*/
+  transition:all 0.5s 0.1s;
+
+  position: relative;
+}
+/* here is the style for the dropdown visible*/
+.drop.selected div {
+  transform: translate(0,0);
+}
+
+.drop li{
+      display:block;
+      padding: 0;
+      width: 100%;
+      background: #3E8760; !important;
+}
+
+#marker{
+  height: 6px;
+  background: #3E8760;
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  transition: all 0.35s;
+}
